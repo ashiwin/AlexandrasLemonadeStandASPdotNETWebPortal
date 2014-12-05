@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Master Page - Alexandra's Lemonade Stand by Ashiwin</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 1000px;
+            font-family: "Century Gothic";
+        }
+        .style2
+        {
+            text-align: center;
+            font-family: "Century Gothic";
+            color: #FFFFFF;
+        }
+        .style3
+        {
+            width: 200px;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="Media/icon.png" />
+</head>
+<body bgcolor="#FFFBD3" background="Media/background.png">
+    <form id="form1" runat="server">
+    <table class="style1" align="center" bgcolor="FFFBD3">
+        <tr>
+            <td colspan="5" align="center" bgcolor="#FFFBD3">
+                <img alt="Alexandra's Lemonade Stand - Banner" src="Media/header.png" /></td>
+        </tr>
+        <tr>
+            <td bgcolor="#FCD636" class="style3" align="center">
+                <asp:LinkButton ID="homeLinkButton" runat="server" Font-Names="Century Gothic" 
+                    ForeColor="Black" style="font-weight: 700" CausesValidation="False">Home</asp:LinkButton>
+            </td>
+            <td bgcolor="#FCD636" class="style3" align="center">
+                <asp:LinkButton ID="catalogueLinkButton" runat="server" Font-Names="Century Gothic" 
+                    ForeColor="Black" style="font-weight: 700" 
+                    PostBackUrl="~/CataloguePage.aspx" CausesValidation="False">Catalogue</asp:LinkButton>
+            </td>
+            <td bgcolor="#FCD636" class="style3" align="center">
+                <asp:LinkButton ID="aboutLinkButton" runat="server" Font-Names="Century Gothic" 
+                    ForeColor="Black" style="font-weight: 700" 
+                    PostBackUrl="~/AboutUsPage.aspx" CausesValidation="False">About Us</asp:LinkButton>
+            </td>
+            <td bgcolor="#FCD636" class="style3" align="center">
+                <asp:LinkButton ID="contactLinkButton" runat="server" Font-Names="Century Gothic" 
+                    ForeColor="Black" style="font-weight: 700" 
+                    PostBackUrl="~/ContactPage.aspx" CausesValidation="False">Contact</asp:LinkButton>
+            </td>
+            <td bgcolor="#FCD636" class="style3" align="center">
+                <asp:LinkButton ID="logLinkButton" runat="server" Font-Names="Century Gothic" 
+                    ForeColor="Black" style="font-weight: 700" PostBackUrl="~/LogoutPage.aspx" CausesValidation="False">Logout</asp:LinkButton>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5" bgcolor="#FEEA98" align="center">
+                <asp:Label ID="greetingLabel" runat="server" Text="Greeting" 
+                    style="color: #000000"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5" bgcolor="White">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        <tr>
+            <td class="style2" colspan="5" bgcolor="#FCD636">
+                <font color="black">Alexandra&#39;s Lemonade Stand by <a href="https://www.github.com/ashiwin" target="_blank" style="color: rgb(0,0,0)"><font color="black">Ashiwin</font></a> - CC-BY-SA 4.0 - MMXIV</font></td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
